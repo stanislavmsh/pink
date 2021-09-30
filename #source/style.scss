@@ -1,0 +1,30 @@
+// Обнуляющий стиль
+@import "nullstyle";
+// Шрифты
+@import "fonts";
+// VARs
+@import "vars";
+// Visually hidden
+@import "vhidden";
+
+body {
+  font-family: "Open Sans";
+}
+
+.container {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  @media (min-width: $tablet) {
+    max-width: 620px;
+  }
+  @media (min-width: $desktop) {
+    max-width: 940px;
+  }
+}
+
+// Header
+@import "./mainpage/header";
+
+// Intro
+@import "./mainpage/intro";

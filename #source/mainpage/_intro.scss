@@ -1,0 +1,168 @@
+.intro {
+  height: 733px;
+  display: grid;
+  overflow: hidden;
+  &::after {
+    display: none;
+    @media (min-width:$desktop) {
+      grid-area: phone;
+      content: url('../../img/iphone-hand-desktop@1x.png');
+      display: block;
+      transform: translate3d(-328px, 208px, 10px);
+      // margin: 81px 60px 0px 0px;
+    }
+  }
+  @media (min-width:$tablet) {
+    height: 729px;
+    background-image: url('../../img/iphone-hand-tablet@1x.png'), url('../../img/bg-back-tablet@1x.jpg');
+    background-position: bottom, center;
+    background-repeat: no-repeat;
+    background-size:auto 545px, auto 729px;
+
+    grid-template-columns: 330px 330px;
+    grid-template-rows: 364.5px 364.5px;
+    justify-content: center;
+    grid-template-areas:
+    "title ."
+    "download .";
+  }
+  @media (min-width:$desktop) {
+    height: 853px;
+    background-image:url('../../img/bg-back-desktop@1x.jpg');
+    background-position: center;
+    background-size: auto 853px;
+
+    grid-template-rows: 426.5px 426.5px;
+    grid-template-columns: 473px 727px;
+    grid-template-areas:
+    "title phone"
+    "download phone";
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    height: 462px;
+    &::after {
+      content: url(../../img/iphone-hand-mobile@1x.png);
+      // position: absolute;
+      // top: 176px;
+      // left: 0;
+      display: block;
+      margin: 81px 60px 0px 0px;
+      @media (min-width:$tablet) {
+        display: none;
+      }
+
+    }
+    &--text {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 300;
+      width: 280px;
+      height: 47px;
+      margin: 0 auto;
+      padding-top: 95px;
+      @media (min-width:$tablet) {
+        width: 245px;
+        height: 100%;
+        font-size: 40px;
+        line-height: 48px;
+        padding-top: 210px;
+      }
+      @media (min-width:$desktop) {
+        font-size: 50px;
+        width: 300px;
+        line-height: 68px;
+        padding-top: 220px;
+      }
+    }
+
+    @media (max-width:$mobile) {
+      background-image: url('../../img/bg-back-mobile.jpg');
+      background-size: auto 462px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    @media (min-width:$tablet) {
+      grid-area: title;
+      height: 100%;
+      align-items: flex-end;
+    }
+  }
+
+
+
+  &__download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 271px;
+    background-color: #1D2631;
+    @media (min-width:$tablet) {
+      background-color: transparent;
+      grid-area: download;
+      height: 100%;
+    }
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;
+    align-items: center;
+    justify-items: center;
+
+
+  }
+
+  &__description {
+    height: 34px;
+    width: 280px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+
+    padding-top: 28px;
+
+    @media (min-width:$tablet) {
+      font-size: 18px;
+      line-height: 24px;
+      width: 300px;
+      height: 37px;
+
+      padding-top: 38px;
+    }
+    @media (min-width:$desktop) {
+      padding-top: 57px;
+    }
+  }
+}
+// .button {
+// }
+.button--download {
+margin: 28px 20px 38px;
+width: 280px;
+height: 55px;
+background: transparent;
+
+font-weight: 700;
+font-size: 18px;
+line-height: 18px;
+color: #fff;
+
+border: 3px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 29px;
+
+@media (min-width:$tablet) {
+  margin: 13px 0 50px;
+}
+@media (min-width:$desktop) {
+  margin: 24px 0 67px;
+}
+}
