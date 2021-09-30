@@ -1,0 +1,91 @@
+.offers {
+  background-image: url(../../img/grey-background-mobile.svg);
+  background-position: bottom;
+  // background-position-y: 43px;
+  background-repeat: no-repeat;
+  // background-size: cover;
+  background-size: auto 952px;
+  overflow: hidden;
+  @media (min-width:$tablet) {
+    background-size: auto 820px;
+  }
+  &__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 46px;
+  padding-bottom: 35px;
+  color: $customblue;
+   @media (min-width:$tablet) {
+     padding-top: 58px;
+     padding-bottom: 40px;
+     font-size: 40px;
+     line-height: 54px;
+      & br {
+        display: none;
+      }
+      & :last-child {
+        width: 558px;
+        margin: 0 auto;
+      }
+   }
+   @media (min-width:$desktop) {
+    padding-bottom: 66px;
+    padding-top: 77px;
+    font-size: 50px;
+    line-height: 68px;
+    & :last-child {
+      width: 720px;
+      margin: 0 auto;
+    }
+   }
+  }
+
+  &__list {
+    text-align: center;
+    margin-top: 44px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    padding-top: 43px;
+    padding-bottom: 24px;
+
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $customblue;
+  }
+
+  &__grayphone {
+    display: none;
+  }
+
+  &__pinkphone {
+    display: none;
+  }
+
+  &__smilephone {
+    padding-top: 48px;
+    transform: translateY(40px);
+  }
+}
+
+
+
+
+
