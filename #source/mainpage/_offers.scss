@@ -1,13 +1,15 @@
 .offers {
   background-image: url(../../img/grey-background-mobile.svg);
   background-position: bottom;
-  // background-position-y: 43px;
   background-repeat: no-repeat;
-  // background-size: cover;
   background-size: auto 952px;
   overflow: hidden;
   @media (min-width:$tablet) {
-    background-size: auto 820px;
+    background-position-y: 215px;
+  }
+  @media (min-width:$desktop) {
+    background-position-y: 330px;
+    background-size: 100%;
   }
   &__title {
   font-weight: 300;
@@ -46,12 +48,72 @@
   &__list {
     text-align: center;
     margin-top: 44px;
+    @media (min-width:$tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content max-content max-content;
+      grid-template-areas:
+      ". mood"
+      ". world"
+      ". friends";
+      position: relative;
+      text-align: left;
+      margin-top: 0;
+      align-content: end;
+      row-gap: 30px;
+      min-height: 482px;
+    }
+    @media (min-width:$desktop) {
+      grid-template-columns: 252px 249px 256px;
+      // grid-template-rows: max-content;
+      grid-template-areas:
+      "mood world friends";
+      gap: 0;
+      column-gap: 60px;
+      align-content: center;
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width:$tablet) {
+      align-items: flex-start;
+      &:last-child {
+        & .offers__text {
+          padding-bottom: 38px;
+        }
+      }
+    }
+    @media (min-width:$desktop) {
+      align-items: center;
+      &:last-child {
+        & .offers__text {
+          padding-bottom: 0px;
+        }
+      }
+    }
+    &--mood {
+      @media (min-width:$tablet) {
+        grid-area: mood;
+      }
+
+    }
+    &--world {
+      @media (min-width:$tablet) {
+        grid-area: world;
+      }
+
+    }
+    &--friends {
+      @media (min-width:$tablet) {
+        grid-area: friends;
+      }
+
+    }
   }
 
   &__subtitle {
@@ -62,6 +124,17 @@
 
     padding-top: 43px;
     padding-bottom: 24px;
+    @media (min-width:$tablet) {
+      padding-top: 0;
+      padding-bottom: 15px;
+    }
+    @media (min-width:$desktop) {
+      font-size: 30px;
+      line-height: 30px;
+      order: 2;
+      padding-bottom: 28px;
+    }
+
 
   }
 
@@ -69,19 +142,52 @@
     font-size: 14px;
     line-height: 24px;
     color: $customblue;
+    @media (min-width:$tablet) {
+      padding: 0;
+
+    }
+    @media (min-width:$desktop) {
+      font-size: 18px;
+      line-height: 30px;
+      order: 3;
+    }
   }
 
   &__grayphone {
     display: none;
+    @media (min-width:$desktop) {
+      display: block;
+      order: 1;
+      padding-bottom: 49px;
+    }
   }
 
   &__pinkphone {
     display: none;
+    @media (min-width:$desktop) {
+      display: block;
+      order: 1;
+      padding-bottom: 49px;
+    }
   }
 
   &__smilephone {
     padding-top: 48px;
     transform: translateY(40px);
+    @media (min-width:$tablet) {
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      z-index: 1;
+      padding-top: 0;
+    }
+    @media (min-width:$desktop) {
+      display: block;
+      position: static;
+      order: 1;
+      transform: translateY(0px);
+      padding-bottom: 49px;
+    }
   }
 }
 
