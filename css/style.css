@@ -438,6 +438,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  z-index: 200;
 }
 
 .intro__description {
@@ -473,6 +474,7 @@ body {
   width: 280px;
   height: 55px;
   background: transparent;
+  z-index: 100;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;

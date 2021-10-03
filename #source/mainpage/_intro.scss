@@ -114,6 +114,7 @@
     column-gap: 35px;
     align-items: center;
     justify-items: center;
+    z-index: 200;
 
 
   }
@@ -150,6 +151,7 @@ margin: 28px 20px 38px;
 width: 280px;
 height: 55px;
 background: transparent;
+z-index: 100;
 
 font-weight: 700;
 font-size: 18px;
