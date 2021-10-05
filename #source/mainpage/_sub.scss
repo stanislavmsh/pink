@@ -37,7 +37,7 @@
   &__name-cell {
     position: relative;
     &:nth-child(3){
-      background-image: url(../../img/bg-hit-tablet.svg);
+      background-image: url(../img/bg-hit-tablet.svg);
       background-repeat: no-repeat;
       background-size: 50px 50px;
     }
@@ -81,7 +81,7 @@
     @media (min-width:$desktop) {
       height: 94px;
       &:nth-child(3){
-        background-image: url(../../img/bg-hit.svg);
+        background-image: url(../img/bg-hit.svg);
         background-repeat: no-repeat;
         background-size: 70px 70px;
       }
