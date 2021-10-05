@@ -1,0 +1,153 @@
+
+
+.sub {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-image: url(../img/grey-background-sub.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -6px;
+  overflow: hidden;
+  @media (min-width:$tablet) {
+    background-position-y: -15px;
+  }
+  @media (min-width:$desktop) {
+    background-position-y: -31px;
+  }
+
+  & table {
+    transform: translateX(-20px);
+    @media (min-width:$tablet) {
+      width: 620px;
+      margin: 0 auto;
+
+    }
+    @media (min-width:$desktop) {
+      width: 940px;
+      margin: 0 auto;
+
+    }
+  }
+  & svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__name-cell {
+    position: relative;
+    &:nth-child(3){
+      background-image: url(../../img/bg-hit-tablet.svg);
+      background-repeat: no-repeat;
+      background-size: 50px 50px;
+    }
+
+    &:nth-child(3)::before{
+      content:"ХИТ";
+      position: absolute;
+      top: -1px;
+      left: -2px;
+      width: 50px;
+      height: 50px;
+      transform: rotate(-45deg);
+      font-size: 14px;
+      line-height: 30px;
+      z-index: 10;
+      font-weight: 300;
+
+    }
+    min-width: 152px;
+    height: 75px;
+
+    color: #fff;
+    background-color: $customblue;
+
+    border: 2px solid #283645;
+    // border-radius: 1px 0px 0px 0px;
+
+    @media (min-width:$tablet) {
+      min-width: 152px;
+      height: 75px;
+
+      color: #fff;
+      background-color: $customblue;
+
+      border: 2px solid #283645;
+      // border-radius: 1px 0px 0px 0px;
+
+
+
+    }
+    @media (min-width:$desktop) {
+      height: 94px;
+      &:nth-child(3){
+        background-image: url(../../img/bg-hit.svg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(3)::before{
+        top: 6px;
+        left: 7px;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    @media (min-width:$tablet) {
+      font-size: 16px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+    @media (min-width:$desktop) {
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: 300;
+    @media (min-width:$tablet) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    @media (min-width:$desktop) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+.sub__smile,.sub__comms,.sub__pink {
+  & th {
+    padding: 0;
+    min-width: 153px;
+    height: 45px;
+    background: #FFFFFF;
+    outline: 2px solid #E5E5E5;
+    color: $customblue;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    // text-align: left;
+    // padding-left: 15px;
+    &:nth-child(4n+1) {
+      padding-left: 15px;
+      text-align: left;
+    }
+    @media (min-width:$desktop) {
+      height: 59px;
+      font-size: 18px;
+    }
+  }
+}
+
+.icon__checkmark {
+  fill: #3dc644;
+}
+
+.icon__cross {
+  fill: #f25b26;
+}
