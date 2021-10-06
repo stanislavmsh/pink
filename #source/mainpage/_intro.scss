@@ -9,7 +9,6 @@
       content: url('../img/iphone-hand-desktop@1x.png');
       display: block;
       transform: translate3d(-328px, 208px, 10px);
-      // margin: 81px 60px 0px 0px;
     }
   }
   @media (min-width:$tablet) {
@@ -46,9 +45,6 @@
     height: 462px;
     &::after {
       content: url(../img/iphone-hand-mobile@1x.png);
-      // position: absolute;
-      // top: 176px;
-      // left: 0;
       display: block;
       margin: 81px 60px 0px 0px;
       @media (min-width:$tablet) {
@@ -168,4 +164,13 @@ border-radius: 29px;
 @media (min-width:$desktop) {
   margin: 24px 0 67px;
 }
+  &:hover,
+  &:focus {
+    background: #FFFFFF;
+    color: $custompink;
+  }
+  &:active {
+    color: #D2285630;
+  }
+
 }

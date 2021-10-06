@@ -2,14 +2,19 @@
 
 .sub {
   padding-top: 100px;
-  padding-bottom: 70px;
-  background-image: url(../img/grey-background-sub.svg);
-  background-position: bottom center;
+  padding-bottom: 50px;
+  background-image:url(../img/table-mobile.svg), url(../img/grey-background-sub.svg);
+  background-position:bottom, bottom center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -6px;
+  background-size:832px 279px, cover;
+  background-position-y: 100px, -6px;
   overflow: hidden;
   @media (min-width:$tablet) {
+    background-image: none;
+    background-image: url(../img/grey-background-sub.svg);
+    background-position:bottom center;
+    background-size: cover;
+    padding-bottom: 70px;
     background-position-y: -15px;
   }
   @media (min-width:$desktop) {
@@ -17,8 +22,9 @@
   }
 
   & table {
-    transform: translateX(-20px);
+    display: none;
     @media (min-width:$tablet) {
+      display: block;
       width: 620px;
       margin: 0 auto;
 
@@ -63,7 +69,7 @@
     background-color: $customblue;
 
     border: 2px solid #283645;
-    // border-radius: 1px 0px 0px 0px;
+
 
     @media (min-width:$tablet) {
       min-width: 152px;
@@ -73,7 +79,7 @@
       background-color: $customblue;
 
       border: 2px solid #283645;
-      // border-radius: 1px 0px 0px 0px;
+
 
 
 
@@ -118,6 +124,13 @@
       line-height: 30px;
     }
   }
+  & .review__dots {
+    display: flex;
+    padding-top: 325px;
+    @media (min-width:$tablet) {
+      display: none;
+    }
+  }
 }
 
 .sub__smile,.sub__comms,.sub__pink {
@@ -131,13 +144,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 30px;
-    // text-align: left;
-    // padding-left: 15px;
     &:nth-child(4n+1) {
       padding-left: 15px;
       text-align: left;
     }
     @media (min-width:$desktop) {
+      width: 233px;
       height: 59px;
       font-size: 18px;
     }
